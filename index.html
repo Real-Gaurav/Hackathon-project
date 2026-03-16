@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NGO Digital Identity Wallet</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="phone">
+
+<h2>NGO Identity Wallet</h2>
+
+<div class="form">
+
+<input id="name" placeholder="Staff Name">
+
+<input id="role" placeholder="Role">
+
+<input id="ngo" placeholder="NGO Name">
+
+<button onclick="generateID()">Generate Digital ID</button>
+
+</div>
+
+<div class="card" id="card" style="display:none;">
+
+<h3>Digital Staff ID</h3>
+
+<p id="staffDetails"></p>
+
+<div id="qrcode"></div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
