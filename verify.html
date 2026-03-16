@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Verification</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#eef2f3;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.verify-card{
+background:white;
+padding:40px;
+border-radius:10px;
+text-align:center;
+width:320px;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.status{
+margin-top:20px;
+font-size:20px;
+color:green;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="verify-card">
+
+<h2>NGO Staff Verification</h2>
+
+<p id="result"></p>
+
+</div>
+
+<!-- <script>
+
+const params = new URLSearchParams(window.location.search);
+
+let name = params.get("name");
+let role = params.get("role");
+let ngo = params.get("ngo");
+
+if(name && role && ngo){
+
+document.getElementById("result").innerHTML =
+"<b>Name:</b> "+name+"<br>"+
+"<b>Role:</b> "+role+"<br>"+
+"<b>NGO:</b> "+ngo+
+"<div class='status'>✔ VERIFIED STAFF</div>";
+
+}
+else{
+
+document.getElementById("result").innerHTML =
+"<h3 style='color:red'>Invalid ID</h3>";
+
+}
+
+</script> -->
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+let name = params.get("name");
+let role = params.get("role");
+let ngo = params.get("ngo");
+
+if(name && role && ngo){
+
+document.getElementById("result").innerHTML =
+"<b>Name:</b> " + decodeURIComponent(name) + "<br>" +
+"<b>Role:</b> " + decodeURIComponent(role) + "<br>" +
+"<b>NGO:</b> " + decodeURIComponent(ngo) + "<br><br>" +
+"<h3 style='color:green'>✔ VERIFIED STAFF</h3>";
+
+}
+else{
+
+document.getElementById("result").innerHTML =
+"<h3 style='color:red'>Invalid ID</h3>";
+
+}
+
+</script>
+
+</body>
+</html>
